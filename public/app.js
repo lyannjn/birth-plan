@@ -8788,6 +8788,44 @@ var $author$project$Main$notesView = function (model) {
 									]));
 						},
 						model.notes.labor))),
+				A2(
+				$rtfeldman$elm_css$Html$Styled$div,
+				_List_Nil,
+				A2(
+					$elm$core$List$cons,
+					$rtfeldman$elm_css$Html$Styled$text('Notas sobre Parto'),
+					A2(
+						$elm$core$List$map,
+						function (x) {
+							return A2(
+								$rtfeldman$elm_css$Html$Styled$div,
+								_List_Nil,
+								_List_fromArray(
+									[
+										$rtfeldman$elm_css$Html$Styled$text('- '),
+										$rtfeldman$elm_css$Html$Styled$text(x)
+									]));
+						},
+						model.notes.birth))),
+				A2(
+				$rtfeldman$elm_css$Html$Styled$div,
+				_List_Nil,
+				A2(
+					$elm$core$List$cons,
+					$rtfeldman$elm_css$Html$Styled$text('Notas sobre PostParto'),
+					A2(
+						$elm$core$List$map,
+						function (x) {
+							return A2(
+								$rtfeldman$elm_css$Html$Styled$div,
+								_List_Nil,
+								_List_fromArray(
+									[
+										$rtfeldman$elm_css$Html$Styled$text('- '),
+										$rtfeldman$elm_css$Html$Styled$text(x)
+									]));
+						},
+						model.notes.postpartum))),
 				A2($rtfeldman$elm_css$Html$Styled$p, _List_Nil, _List_Nil)
 			]));
 };

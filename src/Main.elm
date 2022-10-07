@@ -73,9 +73,16 @@ notesView model =
         ]
         [ p [] []
         , div []
-            (text
-                "Notas sobre Labor"
+            (text "Notas sobre Labor"
                 :: List.map (\x -> div [] [ text "- ", text x ]) model.notes.labor
+            )
+        , div []
+            (text "Notas sobre Parto"
+                :: List.map (\x -> div [] [ text "- ", text x ]) model.notes.birth
+            )
+        , div []
+            (text "Notas sobre PostParto"
+                :: List.map (\x -> div [] [ text "- ", text x ]) model.notes.postpartum
             )
         , p [] []
         ]
