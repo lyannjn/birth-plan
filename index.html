@@ -1,3 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <style>body { padding: 0; margin: 0; }</style>
+</head>
+
+<body>
+
+<pre id="elm"></pre>
+
+<script>
+try {
 (function(scope){
 'use strict';
 
@@ -8831,6 +8845,10 @@ var $author$project$Main$notesView = function (model) {
 				A2($rtfeldman$elm_css$Html$Styled$p, _List_Nil, _List_Nil)
 			]));
 };
+var $rtfeldman$elm_css$Css$Structure$AllQuery = function (a) {
+	return {$: 'AllQuery', a: a};
+};
+var $rtfeldman$elm_css$Css$Media$all = $rtfeldman$elm_css$Css$Structure$AllQuery;
 var $elm$core$List$filter = F2(
 	function (isGood, list) {
 		return A3(
@@ -8842,6 +8860,17 @@ var $elm$core$List$filter = F2(
 			_List_Nil,
 			list);
 	});
+var $rtfeldman$elm_css$Css$Media$feature = F2(
+	function (key, _v0) {
+		var value = _v0.value;
+		return {
+			feature: key,
+			value: $elm$core$Maybe$Just(value)
+		};
+	});
+var $rtfeldman$elm_css$Css$Media$minWidth = function (value) {
+	return A2($rtfeldman$elm_css$Css$Media$feature, 'min-width', value);
+};
 var $author$project$Main$ToggleDialog = function (a) {
 	return {$: 'ToggleDialog', a: a};
 };
@@ -19857,6 +19886,11 @@ var $author$project$Main$preferenceView = F2(
 						]))
 				]));
 	});
+var $rtfeldman$elm_css$Css$Preprocess$WithMedia = F2(
+	function (a, b) {
+		return {$: 'WithMedia', a: a, b: b};
+	});
+var $rtfeldman$elm_css$Css$Media$withMedia = $rtfeldman$elm_css$Css$Preprocess$WithMedia;
 var $author$project$Main$preferencesView = function (_v0) {
 	var preferences = _v0.preferences;
 	var vaginalBirthPrefs = A2(
@@ -19889,7 +19923,19 @@ var $author$project$Main$preferencesView = function (_v0) {
 						A2($rtfeldman$elm_css$Css$property, 'grid-template-columns', 'minmax(min(100%, 300px), 300px)'),
 						A2($rtfeldman$elm_css$Css$property, 'grid-row-gap', '25px'),
 						A2($rtfeldman$elm_css$Css$property, 'grid-column-gap', '15px'),
-						A2($rtfeldman$elm_css$Css$property, 'justify-content', 'center')
+						A2($rtfeldman$elm_css$Css$property, 'justify-content', 'center'),
+						A2(
+						$rtfeldman$elm_css$Css$Media$withMedia,
+						_List_fromArray(
+							[
+								$rtfeldman$elm_css$Css$Media$all(
+								_List_fromArray(
+									[
+										$rtfeldman$elm_css$Css$Media$minWidth(
+										$rtfeldman$elm_css$Css$px(100))
+									]))
+							]),
+						_List_Nil)
 					]))
 			]),
 		A2(
@@ -19902,7 +19948,7 @@ var $author$project$Main$preferencesView = function (_v0) {
 						_List_fromArray(
 							[
 								A2($rtfeldman$elm_css$Css$property, 'align-self', 'center'),
-								A2($rtfeldman$elm_css$Css$property, 'justify-items', 'center'),
+								A2($rtfeldman$elm_css$Css$property, 'justify-items', 'end'),
 								A2($rtfeldman$elm_css$Css$property, 'display', 'grid')
 							]))
 					]),
@@ -19928,7 +19974,7 @@ var $author$project$Main$preferencesView = function (_v0) {
 								_List_fromArray(
 									[
 										A2($rtfeldman$elm_css$Css$property, 'align-self', 'center'),
-										A2($rtfeldman$elm_css$Css$property, 'justify-items', 'center'),
+										A2($rtfeldman$elm_css$Css$property, 'justify-items', 'end'),
 										A2($rtfeldman$elm_css$Css$property, 'display', 'grid')
 									]))
 							]),
@@ -19954,7 +20000,7 @@ var $author$project$Main$preferencesView = function (_v0) {
 										_List_fromArray(
 											[
 												A2($rtfeldman$elm_css$Css$property, 'align-self', 'center'),
-												A2($rtfeldman$elm_css$Css$property, 'justify-items', 'center'),
+												A2($rtfeldman$elm_css$Css$property, 'justify-items', 'end'),
 												A2($rtfeldman$elm_css$Css$property, 'display', 'grid')
 											]))
 									]),
@@ -20040,3 +20086,21 @@ var $author$project$Main$main = $elm$browser$Browser$element(
 	});
 _Platform_export({'Main':{'init':$author$project$Main$main(
 	$elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)}});}(this));
+
+  var app = Elm.Main.init({ node: document.getElementById("elm") });
+}
+catch (e)
+{
+  // display initialization errors (e.g. bad flags, infinite recursion)
+  var header = document.createElement("h1");
+  header.style.fontFamily = "monospace";
+  header.innerText = "Initialization Error";
+  var pre = document.getElementById("elm");
+  document.body.insertBefore(header, pre);
+  pre.innerText = e;
+  throw e;
+}
+</script>
+
+</body>
+</html>

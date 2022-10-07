@@ -179,19 +179,20 @@ preferencesView { preferences } =
             , property "grid-row-gap" "25px"
             , property "grid-column-gap" "15px"
             , property "justify-content" "center"
-            , withMedia [ Css.Media.all [ Css.Media.minWidth (px 100) ] ] [ property "grid-template-columns" "repeat(6,1fr)" ]
+
+            --, withMedia [ Css.Media.all [ Css.Media.minWidth (px 100) ] ] [ property "grid-template-columns" "repeat(6,1fr)" ]
             ]
         ]
         (div
-            [ css [ property "align-self" "center", property "justify-items" "end", property "display" "grid" ] ]
+            [ css [ property "align-self" "center", property "justify-items" "center", property "display" "grid" ] ]
             [ h3 [] [ text "Labor" ] ]
             :: List.indexedMap preferenceView laborPrefs
             ++ div
-                [ css [ property "align-self" "center", property "justify-items" "end", property "display" "grid" ] ]
+                [ css [ property "align-self" "center", property "justify-items" "center", property "display" "grid" ] ]
                 [ h3 [] [ text "Parto" ] ]
             :: List.indexedMap preferenceView vaginalBirthPrefs
             ++ div
-                [ css [ property "align-self" "center", property "justify-items" "end", property "display" "grid" ] ]
+                [ css [ property "align-self" "center", property "justify-items" "center", property "display" "grid" ] ]
                 [ h3 [] [ text "Posparto" ] ]
             :: List.indexedMap preferenceView postpartumPrefs
         )
