@@ -8755,7 +8755,6 @@ var $rtfeldman$elm_css$Css$prop1 = F2(
 		return A2($rtfeldman$elm_css$Css$property, key, arg.value);
 	});
 var $rtfeldman$elm_css$Css$maxWidth = $rtfeldman$elm_css$Css$prop1('max-width');
-var $rtfeldman$elm_css$Html$Styled$h4 = $rtfeldman$elm_css$Html$Styled$node('h4');
 var $author$project$Main$notesView = function (model) {
 	return A2(
 		$rtfeldman$elm_css$Html$Styled$div,
@@ -8773,80 +8772,62 @@ var $author$project$Main$notesView = function (model) {
 				A2(
 				$rtfeldman$elm_css$Html$Styled$div,
 				_List_Nil,
-				_List_fromArray(
-					[
-						A2(
-						$rtfeldman$elm_css$Html$Styled$h4,
-						_List_Nil,
-						A2(
-							$elm$core$List$cons,
-							$rtfeldman$elm_css$Html$Styled$text('Notas sobre Labor'),
-							A2(
-								$elm$core$List$map,
-								function (x) {
-									return A2(
-										$rtfeldman$elm_css$Html$Styled$div,
-										_List_Nil,
-										_List_fromArray(
-											[
-												$rtfeldman$elm_css$Html$Styled$text('- '),
-												$rtfeldman$elm_css$Html$Styled$text(x)
-											]));
-								},
-								model.notes.labor)))
-					])),
+				A2(
+					$elm$core$List$cons,
+					$rtfeldman$elm_css$Html$Styled$text('NOTAS SOBRE LABOR'),
+					A2(
+						$elm$core$List$map,
+						function (x) {
+							return A2(
+								$rtfeldman$elm_css$Html$Styled$div,
+								_List_Nil,
+								_List_fromArray(
+									[
+										$rtfeldman$elm_css$Html$Styled$text('- '),
+										$rtfeldman$elm_css$Html$Styled$text(x)
+									]));
+						},
+						model.notes.labor))),
 				A2($rtfeldman$elm_css$Html$Styled$p, _List_Nil, _List_Nil),
 				A2(
 				$rtfeldman$elm_css$Html$Styled$div,
 				_List_Nil,
-				_List_fromArray(
-					[
-						A2(
-						$rtfeldman$elm_css$Html$Styled$h4,
-						_List_Nil,
-						A2(
-							$elm$core$List$cons,
-							$rtfeldman$elm_css$Html$Styled$text('Notas sobre Parto'),
-							A2(
-								$elm$core$List$map,
-								function (x) {
-									return A2(
-										$rtfeldman$elm_css$Html$Styled$div,
-										_List_Nil,
-										_List_fromArray(
-											[
-												$rtfeldman$elm_css$Html$Styled$text('- '),
-												$rtfeldman$elm_css$Html$Styled$text(x)
-											]));
-								},
-								model.notes.birth)))
-					])),
+				A2(
+					$elm$core$List$cons,
+					$rtfeldman$elm_css$Html$Styled$text('NOTAS SOBRE PARTO'),
+					A2(
+						$elm$core$List$map,
+						function (x) {
+							return A2(
+								$rtfeldman$elm_css$Html$Styled$div,
+								_List_Nil,
+								_List_fromArray(
+									[
+										$rtfeldman$elm_css$Html$Styled$text('- '),
+										$rtfeldman$elm_css$Html$Styled$text(x)
+									]));
+						},
+						model.notes.birth))),
 				A2($rtfeldman$elm_css$Html$Styled$p, _List_Nil, _List_Nil),
 				A2(
 				$rtfeldman$elm_css$Html$Styled$div,
 				_List_Nil,
-				_List_fromArray(
-					[
-						A2(
-						$rtfeldman$elm_css$Html$Styled$h4,
-						_List_Nil,
-						A2(
-							$elm$core$List$cons,
-							$rtfeldman$elm_css$Html$Styled$text('Notas sobre PostParto'),
-							A2(
-								$elm$core$List$map,
-								function (x) {
-									return A2(
-										$rtfeldman$elm_css$Html$Styled$div,
-										_List_Nil,
-										_List_fromArray(
-											[
-												$rtfeldman$elm_css$Html$Styled$text('- '),
-												$rtfeldman$elm_css$Html$Styled$text(x)
-											]));
-								},
-								model.notes.postpartum)))
-					])),
+				A2(
+					$elm$core$List$cons,
+					$rtfeldman$elm_css$Html$Styled$text('NOTAS SOBRE POSPARTO'),
+					A2(
+						$elm$core$List$map,
+						function (x) {
+							return A2(
+								$rtfeldman$elm_css$Html$Styled$div,
+								_List_Nil,
+								_List_fromArray(
+									[
+										$rtfeldman$elm_css$Html$Styled$text('- '),
+										$rtfeldman$elm_css$Html$Styled$text(x)
+									]));
+						},
+						model.notes.postpartum))),
 				A2($rtfeldman$elm_css$Html$Styled$p, _List_Nil, _List_Nil)
 			]));
 };
